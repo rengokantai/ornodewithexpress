@@ -25,5 +25,8 @@
     "jquery": "^2.2.3",
     "lodash": "^4.11.2",
     "node-uuid": "^1.4.7"
+  },
+  "devDependencies": {
+    "express-debug": "^1.1.1"
   }
 }
