@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/rengokantai/ornodewithexpress#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "lodash": "^4.11.2",
+    "node-uuid": "^1.4.7"
   }
 }
