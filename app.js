@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 
 app.use(require('express-session')({
-    secret: 'keyboard cat', resave: false, saveUninitialized: false
+    secret: 'cat', resave: false, saveUninitialized: false
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -66,7 +66,7 @@ app.use(function (req, res, next) {
 //});
 
 
-app.get('/', function (req, res,next) {
+app.get('/', function (req, res) {
     res.render("home", { title: "Home"});
 });
 

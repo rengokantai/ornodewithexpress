@@ -6,6 +6,15 @@ var rooms = require("./data/rooms.json");
 var router = express.Router();
 module.exports = router;
 
+router.use(function (req, res, next) {
+    if (req.user.admin) {   //check whether a user is admin
+        next();
+        return;
+    }
+    res.redirect("/login");
+});
+
+
 router.get('/rooms', function (req, res) {
   res.render("rooms", {
     title: "Admin Rooms",

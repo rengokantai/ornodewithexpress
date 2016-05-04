@@ -14,8 +14,9 @@ html(lang='en')
                     ul.nav.navbar-nav
                         li.active
                             a(href='/') Home
-                        li
-                            a(href='/admin/rooms') Chat Rooms
+                        if user.admin
+                            li
+                                a(href='/admin/rooms') Chat Rooms
                         li
                             a(href='/admin/users') Users
                     ul.nav.navbar-nav.navbar-right
