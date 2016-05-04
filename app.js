@@ -34,6 +34,10 @@ app.get('/', function (req, res,next) {
 
     //res.render("home", { title: "Home"});
     fs.readFile("./data/roomsx.json","utf8",function(err,data){
+        if(err){
+            next(err);
+            return;
+        }
         res.send(data);
     })
 
