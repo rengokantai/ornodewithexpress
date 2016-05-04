@@ -16,9 +16,18 @@ app.use(express.static("node_modules/jquery/dist"));
 //require('express-debug')(app,{})
 app.use(bodyParser.urlencoded({ extended:   true }));
 app.use(bodyParser.json());
-app.get('/', function (req, res) {
-    throw new Error('x');
-    res.render("home", { title: "Home"});
+//app.use(function(err,req,res,next){
+//
+//})
+app.get('/', function (req, res,next) {
+    setTimeout(function(){
+    try{
+        throw new Error('error');
+        res.render("home", { title: "Home"});
+    }catch(error){
+        next(error)
+    }},1000);
+
 });
 
 var adminRouter = require("./admin");
