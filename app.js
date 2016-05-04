@@ -19,14 +19,23 @@ app.use(bodyParser.json());
 //app.use(function(err,req,res,next){
 //
 //})
+//app.get('/', function (req, res,next) {
+//    setTimeout(function(){
+//    try{
+//        throw new Error('error');
+//        res.render("home", { title: "Home"});
+//    }catch(error){
+//        next(error)
+//    }},1000);
+//
+//});
+
 app.get('/', function (req, res,next) {
-    setTimeout(function(){
-    try{
-        throw new Error('error');
-        res.render("home", { title: "Home"});
-    }catch(error){
-        next(error)
-    }},1000);
+
+    //res.render("home", { title: "Home"});
+    fs.readFile("./data/roomsx.json","utf8",function(err,data){
+        res.send(data);
+    })
 
 });
 
