@@ -7,7 +7,9 @@ var bodyParser = require("body-parser");
 
 app.set("views", "./views");
 app.set('view engine', 'jade');
-app.use(require("morgan")("combined"))
+var fs = require('fs');
+var accessLog = fs.createWriteStream(__dirname+'/access.log',{flags:'a'})//append mode
+app.use(require("morgan")("combined",{stream:accessLog}))
 app.use(express.static("public"));
 app.use(express.static("node_modules/bootstrap/dist"));
 app.use(express.static("node_modules/jquery/dist"));
