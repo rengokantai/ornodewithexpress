@@ -21,10 +21,13 @@
     "body-parser": "^1.15.0",
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
+    "express-session": "^1.13.0",
     "jade": "^1.11.0",
     "jquery": "^2.2.3",
     "lodash": "^4.11.2",
-    "node-uuid": "^1.4.7"
+    "node-uuid": "^1.4.7",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "express-debug": "^1.1.1",
