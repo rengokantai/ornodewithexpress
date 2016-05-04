@@ -17,6 +17,7 @@ app.use(express.static("node_modules/jquery/dist"));
 app.use(bodyParser.urlencoded({ extended:   true }));
 app.use(bodyParser.json());
 app.get('/', function (req, res) {
+    throw new Error('x');
     res.render("home", { title: "Home"});
 });
 
